@@ -104,3 +104,15 @@ Then the first test is done to check if the pacman touched a ghost.
 After that, all ghosts are moved and a second test of the pacman collision with the ghosts is done.
 After the crash tests, it is checked if the pacman has taken any tablets and the score values ​​and the superpower flag are changed. In addition, it is checked if the tablets are out of order for the pacman to win the game.
 At the end, a millisecond timer is used to move the pacman and ghosts. For this, flags can_move_pacman and can_move_ghost are used, which become true whenever the timer reaches the values ​​of pacman_speed and ghosts_speed, respectively. The ghosts have the same speed as the pacman in normal play and 70% of his speed when the pacman is overpowered. A timer is also used to control the super power time, set to 5 seconds.
+
+# Game Manual,
+
+When opening the game folder, the files must include: “pacman.exe”, “pacman.c” and “labrint.txt”.
+There are two ways to open the game, by running the main.exe file (executable), or by compiling the “main.c” file.
+When opening the game, the user is faced with a maze of walls defined as “#”, pills defined as “o” and super pills defined as “*”. In addition there are ghosts defined as "W" or "w" and the player pacman defined as "C".
+The player's goal is to eat all the pills without being killed by the ghosts that follow him. For this, the keys "W", "X", "A" and "D" are used to move the pacman up, down, left and right, respectively. To stop the pacman, use the “S” key and to pause and resume the game, use the “P” key.
+When touching a ghost, in a normal situation, the Pacman loses a life. Whenever the pacman is killed by a ghost, the positions of all ghosts and the player are reset. The pacman has 3 lives to try to complete the maze.
+By eating a super pill, Pacman gains superpowers for 10 seconds and can eat ghosts, which become slower and smaller. The game has a scoring system that follows the following table:
+Pill: 1 points
+Ghost: 5 points
+When finishing the pills or the pacman ending their lives, a finishing screen is displayed showing the final score of the player and a congratulation or a game-over, according to the result obtained.
